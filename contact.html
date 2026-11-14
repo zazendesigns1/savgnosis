@@ -433,7 +433,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
     if (!form.checkValidity()) { form.reportValidity(); return; }
     var g = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value.trim() : ''; };
     if (parseInt(g('form_fields[math_question]'), 10) !== 20) { say('Please answer the question: 10+10=?', false); return; }
-    if (g('botcheck')) { return; }
+    var bot = form.querySelector('[name="botcheck"]'); if (bot && bot.checked) { return; }
     var interested = Array.prototype.slice.call(form.querySelectorAll('[name="form_fields[interested][]"]:checked')).map(function (c) { return c.value; }).join(', ');
     var data = {
       access_key: '0902f5ca-0fb2-4515-910f-67470f509683',
