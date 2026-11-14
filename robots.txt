@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://savannahgnosis.com/sitemap.xml
+Sitemap: https://savgnosis.vercel.app/sitemap.xml
