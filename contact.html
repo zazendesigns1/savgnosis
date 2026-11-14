@@ -423,11 +423,11 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
   var note = document.createElement('div');
   note.setAttribute('role', 'status');
   note.setAttribute('aria-live', 'polite');
-  note.style.cssText = 'width:100%;margin-top:14px;font-size:16px;line-height:1.5;';
+  note.style.cssText = 'width:100%;margin-top:16px;font-size:18px;line-height:1.5;color:#ffffff;';
   form.appendChild(note);
   function say(msg, ok) {
     note.textContent = msg;
-    note.className = 'elementor-message ' + (ok ? 'elementor-message-success' : 'elementor-message-danger');
+    note.style.color = ok ? '#ffffff' : '#ff9a9a';
   }
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -454,7 +454,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data)
     }).then(function (r) { return r.json(); }).then(function (res) {
-      if (res && res.success) { form.reset(); say('Thank you! Your message has been sent. We will be in touch soon.', true); }
+      if (res && res.success) { form.reset(); say('Thank you! Your message has been sent. We will be in touch soon. \uD83C\uDF89', true); }
       else { say('Sorry, something went wrong. Please email gnosissavannah@gmail.com instead.', false); }
     }).catch(function () {
       say('Sorry, the message could not be sent. Please email gnosissavannah@gmail.com instead.', false);
