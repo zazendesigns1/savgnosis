@@ -4,7 +4,7 @@
   "rewrites": [
     {
       "source": "/wp-json/sliderrevolution/sliders/:id",
-      "has": [{ "type": "query", "key": "slideid", "value": "(?<slide>\d+)" }],
+      "has": [{ "type": "query", "key": "slideid", "value": "(?<slide>[0-9]+)" }],
       "destination": "/sr7-data/:id-slide-:slide.json"
     },
     { "source": "/wp-json/sliderrevolution/sliders/:id", "destination": "/sr7-data/:id.json" }
