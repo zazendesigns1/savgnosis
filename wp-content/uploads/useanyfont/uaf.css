@@ -1,0 +1,34 @@
+				@font-face {
+					font-family: 'ginto';
+					src: url('6953Ginto.woff2') format('woff2'),
+						url('6953Ginto.woff') format('woff');
+					   font-display: auto;
+				}
+
+				.ginto{font-family: 'ginto' !important;}
+
+						@font-face {
+					font-family: 'ginto-light';
+					src: url('2709Ginto-light.woff2') format('woff2'),
+						url('2709Ginto-light.woff') format('woff');
+					   font-display: auto;
+				}
+
+				.ginto-light{font-family: 'ginto-light' !important;}
+
+						@font-face {
+					font-family: 'light';
+					src: url('391Light.woff2') format('woff2'),
+						url('391Light.woff') format('woff');
+					   font-display: auto;
+				}
+
+				.light{font-family: 'light' !important;}
+
+						h1, h2, h3, h4, h5{
+					font-family: 'ginto' !important;
+				}
+						.entry-title, body.single-post .entry-title, body.page .entry-title, body.category .entry-title, .widget-title, body, p{
+					font-family: 'light' !important;
+				}
+		

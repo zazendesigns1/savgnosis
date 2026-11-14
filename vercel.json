@@ -1,0 +1,28 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/wp-json/sliderrevolution/sliders/:id",
+      "has": [{ "type": "query", "key": "slideid", "value": "(?<slide>\d+)" }],
+      "destination": "/sr7-data/:id-slide-:slide.json"
+    },
+    { "source": "/wp-json/sliderrevolution/sliders/:id", "destination": "/sr7-data/:id.json" }
+  ],
+  "redirects": [
+    { "source": "/wp-admin/:path*", "destination": "/", "permanent": false },
+    { "source": "/wp-login.php", "destination": "/", "permanent": false },
+    { "source": "/feed/:path*", "destination": "/", "permanent": true },
+    { "source": "/comments/feed/:path*", "destination": "/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/wp-content/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+    },
+    {
+      "source": "/wp-includes/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000" }]
+    }
+  ]
+}
